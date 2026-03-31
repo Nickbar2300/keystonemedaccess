@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Keystone MedAccess</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d2744;
+    --navy-mid: #163658;
+    --blue: #1a5fa8;
+    --blue-light: #e8f0fb;
+    --gold: #b8922a;
+    --gold-light: #f7f0e0;
+    --cream: #fafaf8;
+    --border: #dde3ec;
+    --text: #1a2433;
+    --text2: #4a5a6e;
+    --text3: #8a9ab0;
+    --white: #ffffff;
+    --red-light: #fdf0f0;
+    --red: #a4262c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--cream);
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .site-header {
+    background: var(--navy);
+    padding: 0 48px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .brand-mark {
+    width: 36px; height: 36px;
+    background: var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--navy);
+  }
+
+  .brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+  }
+
+  .brand-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.2); margin: 0 4px; }
+
+  .brand-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .header-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 1px;
+    border: 1px solid rgba(184,146,42,0.3);
+    padding: 4px 12px;
+  }
+
+  .doc-hero {
+    background: var(--navy-mid);
+    padding: 52px 48px 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .doc-hero-inner { max-width: 820px; margin: 0 auto; }
+
+  .doc-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .doc-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+
+  .doc-meta { display: flex; gap: 24px; flex-wrap: wrap; }
+
+  .doc-meta-item {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.5px;
+  }
+
+  .doc-meta-item strong { color: rgba(255,255,255,0.8); }
+
+  .layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 56px 48px 80px;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .toc { position: sticky; top: 88px; }
+
+  .toc-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text3);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .toc-link {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--text3);
+    text-decoration: none;
+    padding: 5px 0 5px 12px;
+    border-left: 2px solid transparent;
+    transition: all 0.15s;
+    line-height: 1.4;
+  }
+
+  .toc-link:hover { color: var(--blue); border-left-color: var(--blue); }
+
+  .legal-badge {
+    margin-top: 28px;
+    background: var(--red-light);
+    border: 1px solid rgba(164,38,44,0.2);
+    padding: 14px 16px;
+    border-radius: 2px;
+  }
+
+  .legal-badge-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 6px;
+  }
+
+  .legal-badge-text {
+    font-size: 12px;
+    color: var(--text2);
+    line-height: 1.5;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .content { min-width: 0; }
+
+  .notice-box {
+    background: var(--gold-light);
+    border-left: 4px solid var(--gold);
+    padding: 16px 20px;
+    margin-bottom: 36px;
+    font-size: 14px;
+    color: #5a3e10;
+    line-height: 1.6;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .warn-box {
+    background: var(--red-light);
+    border-left: 4px solid var(--red);
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: 14px;
+    color: var(--red);
+    line-height: 1.6;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .section {
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section:last-child { border-bottom: none; margin-bottom: 0; }
+
+  .section-number {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 6px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--navy);
+    line-height: 1.3;
+  }
+
+  .sub-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--navy-mid);
+    margin-top: 28px;
+    margin-bottom: 12px;
+  }
+
+  p { margin-bottom: 16px; color: var(--text); }
+
+  ul, ol { margin: 12px 0 20px 0; padding-left: 24px; }
+
+  li { margin-bottom: 8px; color: var(--text); padding-left: 4px; }
+
+  strong { color: var(--navy); font-weight: 600; }
+
+  .contact-box {
+    background: var(--navy);
+    padding: 24px 28px;
+    margin-top: 20px;
+  }
+
+  .contact-box p { color: rgba(255,255,255,0.8); margin-bottom: 8px; font-size: 15px; }
+  .contact-box strong { color: white; }
+
+  .site-footer {
+    background: var(--navy);
+    padding: 28px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 3px solid var(--gold);
+  }
+
+  .footer-left {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .footer-links { display: flex; gap: 20px; }
+
+  .footer-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .footer-link:hover { color: var(--gold); }
+  .footer-link.active { color: var(--gold); }
+
+  @media (max-width: 768px) {
+    .layout { grid-template-columns: 1fr; gap: 32px; padding: 32px 24px; }
+    .toc { position: static; }
+    .site-header { padding: 0 24px; }
+    .doc-hero { padding: 36px 24px; }
+    .site-footer { flex-direction: column; gap: 16px; padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="#">
+    <div class="brand-mark">K</div>
+    <span class="brand-name">Keystone MedAccess</span>
+    <div class="brand-divider"></div>
+    <span class="brand-sub">by Keystone Health Partners</span>
+  </a>
+  <div class="header-tag">HIPAA COMPLIANT · BAA AVAILABLE</div>
+</header>
+
+<div class="doc-hero">
+  <div class="doc-hero-inner">
+    <div class="doc-eyebrow">Legal Documentation</div>
+    <div class="doc-title">Terms of Service</div>
+    <div class="doc-meta">
+      <span class="doc-meta-item"><strong>Effective Date:</strong> March 31, 2026</span>
+      <span class="doc-meta-item"><strong>Last Updated:</strong> March 31, 2026</span>
+      <span class="doc-meta-item"><strong>Version:</strong> 1.0</span>
+      <span class="doc-meta-item"><strong>Governing Law:</strong> Commonwealth of Pennsylvania</span>
+    </div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="toc">
+    <div class="toc-label">Contents</div>
+    <a class="toc-link" href="#acceptance">1. Acceptance of Terms</a>
+    <a class="toc-link" href="#services">2. Description of Services</a>
+    <a class="toc-link" href="#eligibility">3. Eligibility & Registration</a>
+    <a class="toc-link" href="#firm-obligations">4. Law Firm Obligations</a>
+    <a class="toc-link" href="#cms-terms">5. CMS Blue Button & Patient Auth</a>
+    <a class="toc-link" href="#hipaa-baa">6. HIPAA & Business Associate</a>
+    <a class="toc-link" href="#prohibited">7. Prohibited Uses</a>
+    <a class="toc-link" href="#ip">8. Intellectual Property</a>
+    <a class="toc-link" href="#fees">9. Fees & Payment</a>
+    <a class="toc-link" href="#disclaimers">10. Disclaimers</a>
+    <a class="toc-link" href="#liability">11. Limitation of Liability</a>
+    <a class="toc-link" href="#indemnification">12. Indemnification</a>
+    <a class="toc-link" href="#termination">13. Termination</a>
+    <a class="toc-link" href="#governing-law">14. Governing Law</a>
+    <a class="toc-link" href="#changes">15. Changes to Terms</a>
+    <a class="toc-link" href="#contact">16. Contact</a>
+
+    <div class="legal-badge">
+      <div class="legal-badge-title">⚠ Legal Notice</div>
+      <div class="legal-badge-text">These Terms constitute a binding legal agreement. Law firms must execute a separate BAA before accessing PHI.</div>
+    </div>
+  </nav>
+
+  <main class="content">
+
+    <div class="notice-box">
+      ⚠ PLEASE READ THESE TERMS OF SERVICE CAREFULLY. BY REGISTERING FOR OR USING KEYSTONE MEDACCESS, YOU AGREE TO BE BOUND BY THESE TERMS. IF YOU DO NOT AGREE, DO NOT USE THE PLATFORM. These Terms constitute a legally binding agreement between your law firm and Keystone Health Partners.
+    </div>
+
+    <div class="section" id="acceptance">
+      <div class="section-number">Section 01</div>
+      <div class="section-title">Acceptance of Terms</div>
+      <p>These Terms of Service ("Terms") govern your access to and use of Keystone MedAccess, a platform operated by Keystone Health Partners ("Keystone," "we," "us," or "our"), located at [INSERT DOMAIN] and accessible via [INSERT PLATFORM URL].</p>
+      <p>By creating an account, accessing the platform, or using any of our services, you ("Client," "Firm," or "User") agree to be bound by these Terms, our Privacy Policy (incorporated herein by reference), and any Business Associate Agreement (BAA) executed between your firm and Keystone Health Partners.</p>
+      <p>If you are accepting these Terms on behalf of a law firm or other legal entity, you represent and warrant that you have the authority to bind that entity to these Terms.</p>
+    </div>
+
+    <div class="section" id="services">
+      <div class="section-number">Section 02</div>
+      <div class="section-title">Description of Services</div>
+      <p>Keystone MedAccess provides authorized law firms with a secure, HIPAA-compliant platform to:</p>
+      <ul>
+        <li>Initiate requests for Medicare claims data on behalf of their clients (Medicare beneficiaries) who provide explicit authorization</li>
+        <li>Verify patient identity prior to initiating data requests via an integrated identity verification service</li>
+        <li>Retrieve Medicare beneficiary data (Part A, B, and D claims) via the CMS Blue Button 2.0 API following patient authorization</li>
+        <li>View, download, and share structured attorney-ready reports and PDF summaries of Medicare claims data</li>
+        <li>Maintain a secure, auditable record of all data requests and retrievals</li>
+      </ul>
+      <p>Keystone Health Partners is a technology platform provider and is <strong>not</strong> a law firm, healthcare provider, or legal advisor. Nothing in our platform or these Terms constitutes legal, medical, or professional advice.</p>
+    </div>
+
+    <div class="section" id="eligibility">
+      <div class="section-number">Section 03</div>
+      <div class="section-title">Eligibility & Registration</div>
+
+      <div class="sub-title">3.1 Eligibility Requirements</div>
+      <p>Access to Keystone MedAccess is restricted to:</p>
+      <ul>
+        <li>Licensed law firms and their authorized personnel (partners, associates, and paralegals) operating under the supervision of a licensed attorney</li>
+        <li>Firms located in and operating under the laws of the United States</li>
+        <li>Firms that have executed a valid Business Associate Agreement (BAA) with Keystone Health Partners</li>
+        <li>Firms that have completed the onboarding process, including identity verification of authorized users</li>
+      </ul>
+      <p>Keystone Health Partners reserves the right to deny access to any firm or individual at our sole discretion.</p>
+
+      <div class="sub-title">3.2 Account Registration</div>
+      <p>To use Keystone MedAccess, your firm must register an account, execute a BAA, and designate authorized users. Each user must authenticate via Microsoft Entra ID with multi-factor authentication (MFA) enabled. You are responsible for maintaining the confidentiality of your access credentials and for all activities that occur under your firm's account.</p>
+
+      <div class="sub-title">3.3 Accurate Information</div>
+      <p>You agree to provide accurate, current, and complete information during registration and to promptly update that information if it changes. Providing false or misleading information is grounds for immediate termination of access.</p>
+    </div>
+
+    <div class="section" id="firm-obligations">
+      <div class="section-number">Section 04</div>
+      <div class="section-title">Law Firm Obligations</div>
+      <p>By using Keystone MedAccess, your firm agrees to the following obligations:</p>
+
+      <div class="sub-title">4.1 Authorized Use Only</div>
+      <ul>
+        <li>Use the platform exclusively for legitimate legal matters on behalf of clients who are Medicare beneficiaries</li>
+        <li>Initiate record requests only for cases in which your firm has an active attorney-client relationship with the Medicare beneficiary</li>
+        <li>Obtain and maintain a HIPAA-compliant patient authorization form for each beneficiary whose records are requested, in addition to the CMS OAuth authorization</li>
+        <li>Ensure all firm personnel who access the platform are trained on HIPAA requirements and your firm's PHI handling policies</li>
+      </ul>
+
+      <div class="sub-title">4.2 Minimum Necessary Standard</div>
+      <p>Your firm agrees to request only the Medicare data necessary for the specific legal matter. You will not request data for beneficiaries whose cases are not active matters at your firm, and you will not retain data beyond the period required for the legal matter.</p>
+
+      <div class="sub-title">4.3 No Unauthorized Re-disclosure</div>
+      <p>Your firm agrees not to share, sell, transfer, or disclose Medicare beneficiary PHI obtained through Keystone MedAccess to any third party that is not covered by an appropriate BAA or patient authorization, except as required by law or court order.</p>
+
+      <div class="sub-title">4.4 Security Responsibilities</div>
+      <ul>
+        <li>Maintain secure access credentials and immediately notify Keystone Health Partners of any suspected unauthorized access</li>
+        <li>Ensure that downloaded records are stored securely and in compliance with HIPAA requirements at your firm</li>
+        <li>Not circumvent, disable, or interfere with any security feature of the platform</li>
+      </ul>
+    </div>
+
+    <div class="section" id="cms-terms">
+      <div class="section-number">Section 05</div>
+      <div class="section-title">CMS Blue Button 2.0 & Patient Authorization</div>
+
+      <div class="warn-box">
+        ⚠ CRITICAL: Medicare beneficiary data is retrieved exclusively through the CMS Blue Button 2.0 API and only with explicit patient authorization. No data may be accessed, requested, or retrieved without the beneficiary independently completing the CMS OAuth 2.0 authorization flow. Any attempt to circumvent this requirement is a material breach of these Terms and a potential HIPAA violation.
+      </div>
+
+      <div class="sub-title">5.1 Patient Authorization Requirement</div>
+      <p>Every record request through Keystone MedAccess requires the Medicare beneficiary to independently authorize access to their data by completing the CMS Blue Button 2.0 OAuth 2.0 authorization flow on Medicare.gov. This authorization cannot be completed by your firm on behalf of the beneficiary under any circumstances.</p>
+
+      <div class="sub-title">5.2 CMS Terms of Use</div>
+      <p>Your firm's use of Medicare data obtained via Keystone MedAccess is subject to the CMS Blue Button 2.0 Terms of Use, available at bluebutton.cms.gov/terms. By using our platform, you agree to comply with all applicable CMS terms, policies, and applicable federal law governing Medicare data.</p>
+
+      <div class="sub-title">5.3 No Coercion of Beneficiaries</div>
+      <p>Your firm agrees not to pressure, coerce, or incentivize Medicare beneficiaries to authorize data access. Authorization must be freely and voluntarily given by the beneficiary after receiving a plain-language explanation of the purpose of the request.</p>
+
+      <div class="sub-title">5.4 Revocation</div>
+      <p>Beneficiaries may revoke their authorization at any time via Medicare.gov. Upon revocation, your firm must immediately cease any further use of previously retrieved data except as required to complete the specific legal matter for which authorization was obtained.</p>
+    </div>
+
+    <div class="section" id="hipaa-baa">
+      <div class="section-number">Section 06</div>
+      <div class="section-title">HIPAA & Business Associate Agreement</div>
+      <p>Keystone Health Partners operates as a HIPAA Business Associate. Before accessing any Protected Health Information (PHI) through the platform, your firm must execute a Business Associate Agreement (BAA) with Keystone Health Partners.</p>
+      <p>The BAA governs the permitted uses and disclosures of PHI by Keystone Health Partners on behalf of your firm, and establishes the safeguards required to protect that PHI. The BAA is incorporated into these Terms by reference once executed.</p>
+      <p>Your firm acknowledges that:</p>
+      <ul>
+        <li>It is responsible for its own HIPAA compliance with respect to PHI received through the platform</li>
+        <li>It must maintain a BAA with Keystone Health Partners as long as it accesses PHI through the platform</li>
+        <li>Termination of the BAA automatically terminates the firm's right to access PHI through the platform</li>
+        <li>HIPAA violations arising from misuse of the platform by your firm's personnel are the responsibility of your firm</li>
+      </ul>
+    </div>
+
+    <div class="section" id="prohibited">
+      <div class="section-number">Section 07</div>
+      <div class="section-title">Prohibited Uses</div>
+      <p>You agree not to use Keystone MedAccess to:</p>
+      <ul>
+        <li>Request Medicare data without valid patient authorization</li>
+        <li>Access data for individuals who are not active clients of your firm</li>
+        <li>Sell, license, or transfer Medicare beneficiary PHI to any third party</li>
+        <li>Use Medicare data for advertising, marketing, solicitation, or any commercial purpose unrelated to the authorized legal matter</li>
+        <li>Attempt to reverse-engineer, decompile, or extract the source code of the platform</li>
+        <li>Circumvent, disable, or interfere with security features, access controls, or audit logging</li>
+        <li>Upload or transmit malicious code, viruses, or any software that could harm the platform or other users</li>
+        <li>Scrape, harvest, or bulk-extract data beyond what is authorized for specific legal matters</li>
+        <li>Impersonate any person or entity or misrepresent your affiliation with any person or entity</li>
+        <li>Use the platform in violation of any applicable law, including HIPAA, the Computer Fraud and Abuse Act, or any state privacy law</li>
+      </ul>
+      <p>Violation of any prohibited use is grounds for immediate termination of access and may result in civil or criminal liability.</p>
+    </div>
+
+    <div class="section" id="ip">
+      <div class="section-number">Section 08</div>
+      <div class="section-title">Intellectual Property</div>
+      <p>The Keystone MedAccess platform, including its design, code, workflows, user interface, documentation, and branding, is the exclusive intellectual property of Keystone Health Partners and is protected by copyright, trade secret, and other applicable laws.</p>
+      <p>Your firm is granted a limited, non-exclusive, non-transferable license to access and use the platform solely for the purposes described in these Terms during the term of your subscription.</p>
+      <p>Medicare beneficiary data retrieved via the platform belongs to the beneficiary. Keystone Health Partners claims no ownership over PHI retrieved on behalf of your firm and its clients.</p>
+      <p>You may not reproduce, modify, distribute, sublicense, or create derivative works of any Keystone Health Partners proprietary materials without express written permission.</p>
+    </div>
+
+    <div class="section" id="fees">
+      <div class="section-number">Section 09</div>
+      <div class="section-title">Fees & Payment</div>
+      <p>Access to Keystone MedAccess is provided on a subscription or per-request basis as set forth in your firm's service agreement with Keystone Health Partners. The following general terms apply:</p>
+      <ul>
+        <li>Fees are due as specified in your service agreement and are non-refundable except as expressly provided therein</li>
+        <li>Keystone Health Partners reserves the right to modify fees upon 30 days' written notice</li>
+        <li>Late payments may result in suspension of platform access</li>
+        <li>Your firm is responsible for all applicable taxes on fees paid to Keystone Health Partners</li>
+      </ul>
+      <p>Specific pricing, billing cycles, and payment methods are set forth in your firm's executed service agreement, which is incorporated herein by reference.</p>
+    </div>
+
+    <div class="section" id="disclaimers">
+      <div class="section-number">Section 10</div>
+      <div class="section-title">Disclaimers</div>
+      <div class="warn-box">
+        THE PLATFORM IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+      </div>
+      <p>Keystone Health Partners does not warrant that:</p>
+      <ul>
+        <li>The platform will be uninterrupted, error-free, or completely secure</li>
+        <li>Medicare data retrieved via the platform is complete, accurate, or current (data accuracy is the responsibility of CMS)</li>
+        <li>The platform will meet all of your firm's specific legal or compliance requirements</li>
+        <li>Any particular legal outcome will result from use of the records retrieved</li>
+      </ul>
+      <p>Keystone Health Partners is a technology platform and is not responsible for the legal strategies, outcomes, or professional judgments of law firms using the platform.</p>
+    </div>
+
+    <div class="section" id="liability">
+      <div class="section-number">Section 11</div>
+      <div class="section-title">Limitation of Liability</div>
+      <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, KEYSTONE HEALTH PARTNERS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOSS OF PROFITS, DATA, OR GOODWILL, ARISING FROM OR RELATED TO YOUR USE OF THE PLATFORM, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+      <p>IN NO EVENT SHALL KEYSTONE HEALTH PARTNERS' TOTAL LIABILITY TO YOUR FIRM EXCEED THE AMOUNTS PAID BY YOUR FIRM TO KEYSTONE HEALTH PARTNERS IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM.</p>
+      <p>Some jurisdictions do not allow the exclusion or limitation of certain damages, so the above limitations may not apply to you in full.</p>
+    </div>
+
+    <div class="section" id="indemnification">
+      <div class="section-number">Section 12</div>
+      <div class="section-title">Indemnification</div>
+      <p>Your firm agrees to indemnify, defend, and hold harmless Keystone Health Partners, its officers, directors, employees, and agents from and against any claims, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising from or related to:</p>
+      <ul>
+        <li>Your firm's use of the platform in violation of these Terms</li>
+        <li>Your firm's violation of any applicable law, including HIPAA</li>
+        <li>Your firm's unauthorized disclosure or misuse of Medicare beneficiary PHI</li>
+        <li>Any claim brought by a Medicare beneficiary arising from your firm's use of their data</li>
+        <li>Any misrepresentation made by your firm in connection with registration or use of the platform</li>
+      </ul>
+    </div>
+
+    <div class="section" id="termination">
+      <div class="section-number">Section 13</div>
+      <div class="section-title">Termination</div>
+
+      <div class="sub-title">13.1 Termination by Your Firm</div>
+      <p>Your firm may terminate its use of Keystone MedAccess at any time by providing written notice to Keystone Health Partners. Termination does not relieve your firm of any obligations or liabilities incurred prior to termination, including payment of outstanding fees.</p>
+
+      <div class="sub-title">13.2 Termination by Keystone Health Partners</div>
+      <p>Keystone Health Partners may suspend or terminate your firm's access immediately, without notice, in the event of:</p>
+      <ul>
+        <li>Material breach of these Terms or the BAA</li>
+        <li>Suspected or confirmed HIPAA violation</li>
+        <li>Non-payment of fees</li>
+        <li>Conduct that poses a risk to the platform, other users, or Medicare beneficiaries</li>
+        <li>Requirement by law, court order, or regulatory authority</li>
+      </ul>
+
+      <div class="sub-title">13.3 Effect of Termination</div>
+      <p>Upon termination, your firm's access to the platform will be revoked. Keystone Health Partners will retain and delete PHI in accordance with the BAA and applicable law. Sections of these Terms that by their nature should survive termination (including Sections 6, 7, 8, 10, 11, 12, and 14) will survive.</p>
+    </div>
+
+    <div class="section" id="governing-law">
+      <div class="section-number">Section 14</div>
+      <div class="section-title">Governing Law & Dispute Resolution</div>
+      <p>These Terms are governed by and construed in accordance with the laws of the Commonwealth of Pennsylvania, without regard to its conflict of law provisions.</p>
+      <p>Any dispute arising from or relating to these Terms or your use of the platform shall first be submitted to good-faith negotiation between the parties. If the dispute cannot be resolved within 30 days, it shall be submitted to binding arbitration in Pennsylvania under the rules of the American Arbitration Association, except that either party may seek injunctive or other equitable relief in a court of competent jurisdiction to prevent irreparable harm.</p>
+      <p>You agree that any claim against Keystone Health Partners must be brought in your individual capacity and not as a plaintiff or class member in any purported class action proceeding.</p>
+    </div>
+
+    <div class="section" id="changes">
+      <div class="section-number">Section 15</div>
+      <div class="section-title">Changes to These Terms</div>
+      <p>Keystone Health Partners reserves the right to modify these Terms at any time. When we make material changes, we will:</p>
+      <ul>
+        <li>Update the "Last Updated" date at the top of this page</li>
+        <li>Notify your firm via email at least 30 days before material changes take effect</li>
+        <li>Post a prominent notice within the Keystone MedAccess platform</li>
+      </ul>
+      <p>Your firm's continued use of the platform after the effective date of any changes constitutes acceptance of the updated Terms. If you do not agree to the updated Terms, you must discontinue use of the platform before the effective date.</p>
+    </div>
+
+    <div class="section" id="contact">
+      <div class="section-number">Section 16</div>
+      <div class="section-title">Contact</div>
+      <p>For questions about these Terms, to request a BAA, or to report a compliance concern, please contact:</p>
+      <div class="contact-box">
+        <p><strong>Keystone Health Partners</strong></p>
+        <p>Attention: Nick Barbera, Founder &amp; CEO</p>
+        <p>Email: <strong>nbarbera@keystonehealthpartners.com</strong></p>
+        <p>State: <strong>Pennsylvania, USA</strong></p>
+        <p style="margin-top:12px;font-size:13px;color:rgba(255,255,255,0.5);">
+          To report a HIPAA concern to HHS: hhs.gov/ocr &nbsp;|&nbsp; 1-800-368-1019
+        </p>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-left">© 2026 Keystone Health Partners. All rights reserved. Pennsylvania, USA.</div>
+  <div class="footer-links">
+    <a class="footer-link" href="privacy-policy.html">Privacy Policy</a>
+    <a class="footer-link active" href="terms-of-service.html">Terms of Service</a>
+    <a class="footer-link" href="mailto:nbarbera@keystonehealthpartners.com">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>

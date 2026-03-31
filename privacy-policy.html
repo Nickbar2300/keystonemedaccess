@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Keystone MedAccess</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d2744;
+    --navy-mid: #163658;
+    --blue: #1a5fa8;
+    --blue-light: #e8f0fb;
+    --gold: #b8922a;
+    --gold-light: #f7f0e0;
+    --cream: #fafaf8;
+    --border: #dde3ec;
+    --text: #1a2433;
+    --text2: #4a5a6e;
+    --text3: #8a9ab0;
+    --white: #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--cream);
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--navy);
+    padding: 0 48px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .brand-mark {
+    width: 36px; height: 36px;
+    background: var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--navy);
+  }
+
+  .brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+  }
+
+  .brand-divider {
+    width: 1px; height: 20px;
+    background: rgba(255,255,255,0.2);
+    margin: 0 4px;
+  }
+
+  .brand-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .header-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 1px;
+    border: 1px solid rgba(184,146,42,0.3);
+    padding: 4px 12px;
+  }
+
+  /* ── HERO BAND ── */
+  .doc-hero {
+    background: var(--navy-mid);
+    padding: 52px 48px 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .doc-hero-inner {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .doc-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .doc-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+
+  .doc-meta {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .doc-meta-item {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.5px;
+  }
+
+  .doc-meta-item strong {
+    color: rgba(255,255,255,0.8);
+  }
+
+  /* ── LAYOUT ── */
+  .layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 56px 48px 80px;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  /* ── TOC ── */
+  .toc {
+    position: sticky;
+    top: 88px;
+  }
+
+  .toc-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text3);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .toc-link {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--text3);
+    text-decoration: none;
+    padding: 5px 0 5px 12px;
+    border-left: 2px solid transparent;
+    transition: all 0.15s;
+    line-height: 1.4;
+  }
+
+  .toc-link:hover {
+    color: var(--blue);
+    border-left-color: var(--blue);
+  }
+
+  .hipaa-badge {
+    margin-top: 28px;
+    background: var(--gold-light);
+    border: 1px solid rgba(184,146,42,0.25);
+    padding: 14px 16px;
+    border-radius: 2px;
+  }
+
+  .hipaa-badge-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  .hipaa-badge-text {
+    font-size: 12px;
+    color: var(--text2);
+    line-height: 1.5;
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* ── CONTENT ── */
+  .content { min-width: 0; }
+
+  .notice-box {
+    background: var(--blue-light);
+    border-left: 4px solid var(--blue);
+    padding: 16px 20px;
+    margin-bottom: 36px;
+    font-size: 14px;
+    color: #1a4070;
+    line-height: 1.6;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .section {
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .section-number {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 6px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--navy);
+    line-height: 1.3;
+  }
+
+  .sub-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--navy-mid);
+    margin-top: 28px;
+    margin-bottom: 12px;
+  }
+
+  p { margin-bottom: 16px; color: var(--text); }
+
+  ul, ol {
+    margin: 12px 0 20px 0;
+    padding-left: 24px;
+  }
+
+  li {
+    margin-bottom: 8px;
+    color: var(--text);
+    padding-left: 4px;
+  }
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+
+  .data-table th {
+    background: var(--navy);
+    color: white;
+    padding: 10px 16px;
+    text-align: left;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .data-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+
+  .data-table tr:nth-child(even) td { background: var(--blue-light); }
+
+  strong { color: var(--navy); font-weight: 600; }
+
+  .contact-box {
+    background: var(--navy);
+    padding: 24px 28px;
+    margin-top: 20px;
+  }
+
+  .contact-box p { color: rgba(255,255,255,0.8); margin-bottom: 8px; font-size: 15px; }
+  .contact-box strong { color: white; }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--navy);
+    padding: 28px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 3px solid var(--gold);
+  }
+
+  .footer-left {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .footer-link:hover { color: var(--gold); }
+  .footer-link.active { color: var(--gold); }
+
+  @media (max-width: 768px) {
+    .layout { grid-template-columns: 1fr; gap: 32px; padding: 32px 24px; }
+    .toc { position: static; }
+    .site-header { padding: 0 24px; }
+    .doc-hero { padding: 36px 24px; }
+    .site-footer { flex-direction: column; gap: 16px; padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="#">
+    <div class="brand-mark">K</div>
+    <span class="brand-name">Keystone MedAccess</span>
+    <div class="brand-divider"></div>
+    <span class="brand-sub">by Keystone Health Partners</span>
+  </a>
+  <div class="header-tag">HIPAA COMPLIANT · BAA AVAILABLE</div>
+</header>
+
+<div class="doc-hero">
+  <div class="doc-hero-inner">
+    <div class="doc-eyebrow">Legal Documentation</div>
+    <div class="doc-title">Privacy Policy</div>
+    <div class="doc-meta">
+      <span class="doc-meta-item"><strong>Effective Date:</strong> March 31, 2026</span>
+      <span class="doc-meta-item"><strong>Last Updated:</strong> March 31, 2026</span>
+      <span class="doc-meta-item"><strong>Version:</strong> 1.0</span>
+      <span class="doc-meta-item"><strong>Organization:</strong> Keystone Health Partners</span>
+    </div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <!-- TOC -->
+  <nav class="toc">
+    <div class="toc-label">Contents</div>
+    <a class="toc-link" href="#intro">1. Introduction</a>
+    <a class="toc-link" href="#who-we-are">2. Who We Are</a>
+    <a class="toc-link" href="#data-collect">3. Information We Collect</a>
+    <a class="toc-link" href="#how-we-use">4. How We Use Information</a>
+    <a class="toc-link" href="#medicare-data">5. Medicare Data & CMS Blue Button</a>
+    <a class="toc-link" href="#sharing">6. Data Sharing & Disclosure</a>
+    <a class="toc-link" href="#security">7. Security Safeguards</a>
+    <a class="toc-link" href="#retention">8. Data Retention</a>
+    <a class="toc-link" href="#rights">9. Your Rights</a>
+    <a class="toc-link" href="#hipaa">10. HIPAA Notice</a>
+    <a class="toc-link" href="#children">11. Children's Privacy</a>
+    <a class="toc-link" href="#changes">12. Changes to This Policy</a>
+    <a class="toc-link" href="#contact">13. Contact Us</a>
+
+    <div class="hipaa-badge">
+      <div class="hipaa-badge-title">⚖ HIPAA Compliance</div>
+      <div class="hipaa-badge-text">This platform operates as a HIPAA Business Associate. BAAs available upon request.</div>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="content">
+
+    <div class="notice-box">
+      ℹ This Privacy Policy applies to the Keystone MedAccess platform operated by Keystone Health Partners. It governs how we collect, use, protect, and disclose information — including Protected Health Information (PHI) — in connection with our services. If you are a Medicare beneficiary whose data has been requested, please read Section 5 and Section 9 carefully.
+    </div>
+
+    <div class="section" id="intro">
+      <div class="section-number">Section 01</div>
+      <div class="section-title">Introduction</div>
+      <p>Keystone Health Partners ("Keystone," "we," "us," or "our") operates Keystone MedAccess, a HIPAA-compliant platform that enables authorized law firms to request and receive Medicare claims data for their clients who are Medicare beneficiaries, in connection with legal proceedings including personal injury, workers' compensation, and Social Security Disability cases.</p>
+      <p>This Privacy Policy describes our practices regarding the collection, use, storage, disclosure, and protection of information — including Protected Health Information (PHI) as defined under the Health Insurance Portability and Accountability Act of 1996 (HIPAA) — in connection with the Keystone MedAccess platform.</p>
+      <p>By using Keystone MedAccess, you agree to the practices described in this Privacy Policy. If you do not agree, you should not use the platform.</p>
+    </div>
+
+    <div class="section" id="who-we-are">
+      <div class="section-number">Section 02</div>
+      <div class="section-title">Who We Are</div>
+      <p>Keystone Health Partners is a Pennsylvania-based company operating as a <strong>HIPAA Business Associate</strong>. We provide technology services to licensed law firms (our "Clients") that facilitate the authorized retrieval of Medicare beneficiary data from the CMS Blue Button 2.0 API on behalf of those firms' clients (Medicare beneficiaries, or "Beneficiaries").</p>
+      <p>We are not a covered entity under HIPAA (we are not a healthcare provider, health plan, or healthcare clearinghouse), but we handle PHI on behalf of covered entities and their business associates and are therefore subject to HIPAA's Business Associate requirements.</p>
+      <p><strong>Contact:</strong> Nick Barbera, Founder &amp; CEO<br>
+      Email: nbarbera@keystonehealthpartners.com<br>
+      Organization: Keystone Health Partners<br>
+      State: Pennsylvania</p>
+    </div>
+
+    <div class="section" id="data-collect">
+      <div class="section-number">Section 03</div>
+      <div class="section-title">Information We Collect</div>
+
+      <div class="sub-title">3.1 Information from Law Firm Users</div>
+      <p>When a law firm registers for and uses Keystone MedAccess, we collect:</p>
+      <ul>
+        <li>Firm name, address, and contact information</li>
+        <li>Names, email addresses, and job titles of firm personnel who access the platform</li>
+        <li>Authentication credentials managed via Microsoft Entra ID (we do not store passwords)</li>
+        <li>Case reference numbers and matter descriptions entered by firm users</li>
+        <li>Audit logs of all platform activity including logins, record requests, record views, and downloads</li>
+      </ul>
+
+      <div class="sub-title">3.2 Information About Medicare Beneficiaries</div>
+      <p>When a law firm initiates a record request for a Medicare beneficiary, we collect:</p>
+      <ul>
+        <li>Patient name, date of birth, and Medicare Beneficiary Identifier (MBI) as provided by the law firm</li>
+        <li>Identity verification result from our third-party identity verification provider</li>
+        <li>CMS OAuth 2.0 authorization tokens (stored encrypted; never exposed to firm users)</li>
+        <li>Medicare claims data retrieved via the CMS Blue Button 2.0 API upon explicit patient authorization, including: demographic information, Medicare coverage details (Parts A, B, D), Explanation of Benefits (claims data), and Part D prescription drug claims</li>
+      </ul>
+
+      <div class="sub-title">3.3 Automatically Collected Information</div>
+      <p>We automatically collect limited technical data for security and operational purposes:</p>
+      <ul>
+        <li>IP addresses and device information for security monitoring</li>
+        <li>Access logs and API call records for audit compliance</li>
+        <li>Session metadata (login times, duration, actions taken)</li>
+      </ul>
+      <p>We do <strong>not</strong> use cookies for advertising, behavioral tracking, or any purpose beyond essential platform security and session management.</p>
+    </div>
+
+    <div class="section" id="how-we-use">
+      <div class="section-number">Section 04</div>
+      <div class="section-title">How We Use Information</div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Information Type</th>
+            <th>Purpose</th>
+            <th>Legal Basis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Firm user account data</td>
+            <td>Platform authentication, access control, billing</td>
+            <td>Contract performance</td>
+          </tr>
+          <tr>
+            <td>Beneficiary demographics</td>
+            <td>Identity verification, CMS OAuth initiation</td>
+            <td>Patient authorization + BAA</td>
+          </tr>
+          <tr>
+            <td>Medicare claims data (PHI)</td>
+            <td>Generating attorney-ready record reports for the authorized legal matter only</td>
+            <td>Patient authorization + BAA + HIPAA</td>
+          </tr>
+          <tr>
+            <td>Audit logs</td>
+            <td>HIPAA compliance, security monitoring, dispute resolution</td>
+            <td>Legal obligation (HIPAA)</td>
+          </tr>
+          <tr>
+            <td>Technical/session data</td>
+            <td>Platform security, fraud prevention, uptime monitoring</td>
+            <td>Legitimate interest</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>We will <strong>never</strong> use beneficiary PHI for marketing, advertising, analytics unrelated to the specific legal matter, sale to third parties, or any purpose not authorized by the patient and described in this policy.</p>
+    </div>
+
+    <div class="section" id="medicare-data">
+      <div class="section-number">Section 05</div>
+      <div class="section-title">Medicare Data & CMS Blue Button 2.0</div>
+
+      <p>Keystone MedAccess retrieves Medicare beneficiary data exclusively through the <strong>CMS Blue Button 2.0 API</strong>, a federal system operated by the Centers for Medicare &amp; Medicaid Services (CMS). The following principles govern all Medicare data access:</p>
+
+      <div class="sub-title">Patient-Directed Authorization Required</div>
+      <p>No Medicare data is ever accessed without the beneficiary's explicit authorization. When a record request is initiated, the beneficiary receives a secure authorization link via email. This link directs them to Medicare.gov, where they independently authorize Keystone MedAccess to access their data. This authorization flow is operated entirely by CMS — Keystone Health Partners never handles Medicare.gov credentials.</p>
+
+      <div class="sub-title">Scope of Data Access</div>
+      <p>With the beneficiary's authorization, we access the following FHIR R4 data resources:</p>
+      <ul>
+        <li><strong>Patient:</strong> Name, date of birth, address, Medicare ID</li>
+        <li><strong>Coverage:</strong> Medicare Part A, B, and D enrollment and coverage periods</li>
+        <li><strong>ExplanationOfBenefit:</strong> Claims data including providers, diagnoses, procedures, and amounts</li>
+        <li><strong>MedicationRequest:</strong> Part D prescription drug claims</li>
+      </ul>
+
+      <div class="sub-title">Revocation</div>
+      <p>Beneficiaries may revoke their authorization at any time via Medicare.gov. Upon revocation, Keystone MedAccess immediately ceases any further data access. Previously retrieved records are retained only for the duration required to fulfill the legal matter for which access was authorized, then deleted per our retention schedule.</p>
+    </div>
+
+    <div class="section" id="sharing">
+      <div class="section-number">Section 06</div>
+      <div class="section-title">Data Sharing & Disclosure</div>
+
+      <div class="sub-title">With Law Firm Clients</div>
+      <p>Medicare claims data retrieved for a beneficiary is shared exclusively with the law firm that initiated the authorized request, solely for the legal matter specified in the request. Each law firm must execute a Business Associate Agreement (BAA) with Keystone Health Partners before accessing any PHI.</p>
+
+      <div class="sub-title">With Service Providers (Subprocessors)</div>
+      <p>We share limited data with the following categories of service providers who assist in operating the platform, all of whom have executed appropriate data processing agreements and/or BAAs:</p>
+      <ul>
+        <li><strong>Microsoft Azure:</strong> Cloud infrastructure, encrypted storage, audit logging (HIPAA BAA in place)</li>
+        <li><strong>Identity Verification Provider (CLEAR):</strong> Patient identity verification prior to data access (commercial agreement in place)</li>
+        <li><strong>Microsoft Exchange Online:</strong> Sending patient authorization emails (HIPAA BAA in place)</li>
+      </ul>
+
+      <div class="sub-title">Required Disclosures</div>
+      <p>We may disclose information if required by law, court order, or regulatory authority, including to the U.S. Department of Health and Human Services (HHS) in connection with HIPAA compliance reviews or breach investigations. We will notify affected parties to the extent permitted by law.</p>
+
+      <div class="sub-title">We Will Never</div>
+      <ul>
+        <li>Sell beneficiary PHI to any third party</li>
+        <li>Share beneficiary data with advertisers, data brokers, or analytics companies</li>
+        <li>Use beneficiary data to target individuals with marketing communications</li>
+        <li>Disclose PHI for purposes beyond the authorized legal matter without additional explicit authorization</li>
+      </ul>
+    </div>
+
+    <div class="section" id="security">
+      <div class="section-number">Section 07</div>
+      <div class="section-title">Security Safeguards</div>
+      <p>Keystone Health Partners implements the following technical and administrative safeguards to protect information, consistent with HIPAA Security Rule requirements:</p>
+
+      <div class="sub-title">Technical Controls</div>
+      <ul>
+        <li>All data transmitted using TLS 1.3 encryption — no unencrypted channels</li>
+        <li>PHI at rest encrypted using AES-256 with Customer Managed Keys via Azure Key Vault</li>
+        <li>Multi-factor authentication (MFA) required for all platform users</li>
+        <li>Role-based access control limiting PHI access to minimum necessary</li>
+        <li>Immutable audit logging of all PHI access events retained for 7 years</li>
+        <li>Private network endpoints — database and storage layers have no public internet exposure</li>
+        <li>Short-lived presigned download URLs (15-minute expiry) — no persistent direct links to PHI</li>
+      </ul>
+
+      <div class="sub-title">Administrative Controls</div>
+      <ul>
+        <li>HIPAA Risk Analysis conducted prior to production launch</li>
+        <li>Workforce training on PHI handling and HIPAA requirements</li>
+        <li>BAAs executed with all service providers and law firm clients</li>
+        <li>Documented breach notification and incident response procedures</li>
+        <li>Third-party penetration testing prior to production launch</li>
+      </ul>
+
+      <p>Despite these measures, no system is completely immune to security risks. In the event of a breach involving your PHI, we will notify affected individuals and HHS within the timeframes required by the HIPAA Breach Notification Rule.</p>
+    </div>
+
+    <div class="section" id="retention">
+      <div class="section-number">Section 08</div>
+      <div class="section-title">Data Retention</div>
+      <p>We retain information only as long as necessary for the purposes described in this policy and as required by law:</p>
+      <ul>
+        <li><strong>Medicare PHI (claims records, FHIR data):</strong> Retained for the duration of the active legal matter plus a minimum of 6 years as required by HIPAA, or longer if required by applicable state law. Records are deleted upon written request from the law firm at matter close, subject to legal hold requirements.</li>
+        <li><strong>Audit logs:</strong> Retained for 7 years per HIPAA audit control requirements, stored separately from PHI.</li>
+        <li><strong>Firm user account data:</strong> Retained for the duration of the firm's agreement with Keystone Health Partners, plus 3 years.</li>
+        <li><strong>Identity verification records:</strong> Retained for 6 years to support audit trail requirements.</li>
+      </ul>
+      <p>Automated Azure Blob Storage lifecycle policies enforce deletion schedules. Manual deletion requests are honored within 30 days unless a legal hold is in effect.</p>
+    </div>
+
+    <div class="section" id="rights">
+      <div class="section-number">Section 09</div>
+      <div class="section-title">Your Rights</div>
+
+      <div class="sub-title">Rights of Medicare Beneficiaries</div>
+      <ul>
+        <li><strong>Right to Refuse:</strong> You may decline to authorize data access. Refusal has no consequence with respect to your Medicare benefits.</li>
+        <li><strong>Right to Revoke:</strong> You may revoke authorization at any time via Medicare.gov. Revocation is effective immediately for future access.</li>
+        <li><strong>Right to Access:</strong> You may request a copy of the PHI Keystone Health Partners holds about you by contacting us at the address below.</li>
+        <li><strong>Right to Correction:</strong> You may request correction of inaccurate PHI in our records.</li>
+        <li><strong>Right to an Accounting:</strong> You may request a list of disclosures of your PHI made by Keystone Health Partners.</li>
+        <li><strong>Right to Deletion:</strong> You may request deletion of your records from our systems; requests are honored within 30 days absent a legal hold.</li>
+        <li><strong>Right to Complain:</strong> If you believe your privacy rights have been violated, you may file a complaint with the HHS Office for Civil Rights at hhs.gov/ocr or by calling 1-800-368-1019. We will not retaliate against you for filing a complaint.</li>
+      </ul>
+
+      <div class="sub-title">Rights of Law Firm Users</div>
+      <ul>
+        <li>You may request access to, correction of, or deletion of your account data by contacting nbarbera@keystonehealthpartners.com.</li>
+        <li>Data deletion requests will be processed within 30 days, subject to legal retention requirements.</li>
+      </ul>
+    </div>
+
+    <div class="section" id="hipaa">
+      <div class="section-number">Section 10</div>
+      <div class="section-title">HIPAA Notice</div>
+      <p>Keystone Health Partners operates as a <strong>HIPAA Business Associate</strong>. We handle Protected Health Information (PHI) solely on behalf of our law firm clients (who may be business associates of covered entities) and in accordance with executed Business Associate Agreements.</p>
+      <p>Our use and disclosure of PHI is governed by HIPAA's Privacy Rule, Security Rule, and Breach Notification Rule. We maintain written policies and procedures addressing all required HIPAA safeguards and conduct regular risk assessments.</p>
+      <p>Law firms using Keystone MedAccess must execute a Business Associate Agreement with Keystone Health Partners before any PHI is accessed through the platform. Template BAAs are available upon request.</p>
+    </div>
+
+    <div class="section" id="children">
+      <div class="section-number">Section 11</div>
+      <div class="section-title">Children's Privacy</div>
+      <p>Keystone MedAccess is designed for use by licensed legal professionals and adult Medicare beneficiaries. We do not knowingly collect personal information from individuals under the age of 18. Medicare eligibility generally begins at age 65 or upon qualifying disability, making our user base exclusively adult.</p>
+      <p>If we become aware that we have inadvertently collected information from a minor, we will delete it promptly.</p>
+    </div>
+
+    <div class="section" id="changes">
+      <div class="section-number">Section 12</div>
+      <div class="section-title">Changes to This Policy</div>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or platform functionality. When we make material changes, we will:</p>
+      <ul>
+        <li>Update the "Last Updated" date at the top of this page</li>
+        <li>Notify law firm clients via email at least 30 days before material changes take effect</li>
+        <li>Post a prominent notice on the Keystone MedAccess platform</li>
+      </ul>
+      <p>Your continued use of the platform after the effective date of any changes constitutes acceptance of the updated policy. If you do not agree with the changes, you should discontinue use of the platform and contact us to terminate your account.</p>
+    </div>
+
+    <div class="section" id="contact">
+      <div class="section-number">Section 13</div>
+      <div class="section-title">Contact Us</div>
+      <p>For questions, concerns, or requests related to this Privacy Policy or your data rights, please contact:</p>
+
+      <div class="contact-box">
+        <p><strong>Privacy Officer</strong></p>
+        <p>Nick Barbera, Founder &amp; CEO<br>
+        Keystone Health Partners</p>
+        <p>Email: <strong>nbarbera@keystonehealthpartners.com</strong></p>
+        <p>State: <strong>Pennsylvania</strong></p>
+        <p style="margin-top:12px;font-size:13px;color:rgba(255,255,255,0.5);">
+          To file a complaint with HHS: hhs.gov/ocr &nbsp;|&nbsp; 1-800-368-1019
+        </p>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-left">© 2026 Keystone Health Partners. All rights reserved. Pennsylvania, USA.</div>
+  <div class="footer-links">
+    <a class="footer-link active" href="privacy-policy.html">Privacy Policy</a>
+    <a class="footer-link" href="terms-of-service.html">Terms of Service</a>
+    <a class="footer-link" href="mailto:nbarbera@keystonehealthpartners.com">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
